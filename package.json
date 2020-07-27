@@ -1,0 +1,24 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is a test directory go learn GIT and NODE",
+  "main": "index.html",
+  "scripts": {
+    "start":"npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baonghi1201/React.git"
+  },
+  "author": "Nghi Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baonghi1201/React/issues"
+  },
+  "homepage": "https://github.com/baonghi1201/React#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
