@@ -20,5 +20,12 @@
   "homepage": "https://github.com/baonghi1201/React#readme",
   "devDependencies": {
     "lite-server": "^2.5.4"
-  }
+  },
+  "keywords": [
+    "Directory",
+    "for",
+    "NODE",
+    "and",
+    "GIT"
+  ]
 }
