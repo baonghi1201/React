@@ -24,10 +24,10 @@ class Dishdetail extends Component{
                 
         return(
             <div className='col-12 col-md-5 m-1'>
-                <h2>Comments</h2>
-                <ul className='list-unstyled'>
-                    {cmts}
-                </ul>
+                    <h2>Comments</h2>
+                    <ul className='list-unstyled'>
+                        {cmts}
+                    </ul>
             </div>
         )
     }
@@ -61,9 +61,11 @@ class Dishdetail extends Component{
         const dishComment=this.renderComments(dish.comments)
         
         return(
-            <div className='row'>
-                {dishItem}
-                {dishComment}
+            <div className='container'>
+                <div className='row'>
+                    {dishItem}
+                    {dishComment}   
+                </div>         
             </div>
         )
 
