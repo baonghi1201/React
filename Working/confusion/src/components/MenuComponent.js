@@ -34,7 +34,4 @@ import {Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle, CardHeader
 
         
         
-    
-
-
-export default Menu;
+    export default Menu;
