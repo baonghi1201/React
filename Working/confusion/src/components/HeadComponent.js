@@ -8,7 +8,7 @@ class Header extends Component{
             <React.Fragment>
                 <Navbar dark color="primary">
                 <div className="container">
-                    <NavbarBrand href="/">Nghi Nguyen</NavbarBrand>
+                    <NavbarBrand href="/">Nghi Nguyen 123</NavbarBrand>
                 </div>
                 </Navbar>
                 <Jumbotron>
