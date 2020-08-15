@@ -3,7 +3,7 @@ import {Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle, CardHeader
  
     function RenderMenuItem({dish, onClick}){
         return(
-            <Card onClick={() => onClick(dish.id)}>
+            <Card>
             <CardImg width="100%" src={dish.image} alt={dish.name}/>
             <CardImgOverlay>
                 <CardTitle heading>{dish.name}</CardTitle>
