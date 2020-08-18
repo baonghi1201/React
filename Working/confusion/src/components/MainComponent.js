@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Navbar,NavbarBrand} from 'reactstrap';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
+import About from './AboutComponent';
 import Home from './HomeComponent';
 import Header from './HeadComponent';
 import Footer from './FooterComponent';
@@ -52,6 +53,7 @@ class Main extends Component{
             <Route exact path="/menu" component={()=><Menu dishes={this.state.dishes}/>}/>
             <Route path='/menu/:dishId' component={DishWithId} />
             <Route exect path="/contactus" component={Contact}/>
+            <Route exact path="/aboutus" component={()=><About leaders={this.state.leaders}/>}/>
             <Redirect to="/home"/>
           </Switch>
         <Footer/>
