@@ -25,7 +25,7 @@ class Contact extends Component{
 
         this.handleInputChange=this.handleInputChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
-        this.handleBlur=this.handBlur.bind(this);
+        this.handleBlur=this.handleBlur.bind(this);
 
     }
 
@@ -137,9 +137,9 @@ class Contact extends Component{
                                 <Col md={8}>
                                     <Input type='text' id='firstname' name='firstname' placeholder='First Name'
                                         value={this.state.firstname}
-                                        valid={errors.firstname === ''}
-                                        invalid={errors.firstname !==''}
-                                        onBlur={errors.handleBlur('firstname')}
+                                        valid={this.firstname === ''}
+                                        invalid={this.firstname !==''}
+                                        onBlur={this.handleBlur('firstname')}
                                         onChange={this.handleInputChange}/>
                                     <FormFeedback>{errors.firstname}</FormFeedback>
                                 </Col>
