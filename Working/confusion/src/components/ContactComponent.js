@@ -137,9 +137,9 @@ class Contact extends Component{
                                 <Col md={8}>
                                     <Input type='text' id='firstname' name='firstname' placeholder='First Name'
                                         value={this.state.firstname}
-                                        valid={errors.firstname === ''}
-                                        invalid={errors.firstname !==''}
-                                        onBlur={errors.handleBlur('firstname')}
+                                        valid={this.firstname === ''}
+                                        invalid={this.firstname !==''}
+                                        onBlur={this.handleBlur('firstname')}
                                         onChange={this.handleInputChange}/>
                                     <FormFeedback>{errors.firstname}</FormFeedback>
                                 </Col>
@@ -231,4 +231,4 @@ class Contact extends Component{
     }
 }
 
-export default Contact;
+export default Contact ;
