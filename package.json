@@ -27,5 +27,8 @@
     "NODE",
     "and",
     "GIT"
-  ]
+  ],
+  "dependencies": {
+    "create-react-app": "^3.4.1"
+  }
 }
