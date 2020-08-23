@@ -31,7 +31,7 @@ class CommentForm extends Component {
         values.rating,
         values.author,
         values.comment
-      );
+      ) ;
     }
   
     render() {
