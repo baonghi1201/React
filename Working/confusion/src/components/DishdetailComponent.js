@@ -28,12 +28,8 @@ toggleModal(){
 
 handleSubmit(values){
     this.toggleModal();
-    this.props.postComment(
-        this.props.dishId,
-        values.rating,
-        values.author,
-        values.comment,
-    );
+    console.log('Current state is: ' + JSON.stringify(values));
+    alert('Current state is: ' + JSON.stringify(values));
 }
 
 render(){
@@ -172,9 +168,7 @@ function RenderComments({comments, postComment, dishId}){
                 </div>
                 <div className="row">                   
                     <RenderDish dish={props.dish} />
-                    <RenderComments comments={props.comments}
-                                    postComment={props.comments} 
-                                    dishId={props.dish.id}/>               
+                    <RenderComments comments={props.comments}/>               
                 </div>
             </div>
         )
