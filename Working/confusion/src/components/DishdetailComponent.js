@@ -33,7 +33,7 @@ handleSubmit(values){
         values.rating,
         values.author,
         values.comment,
-    )
+    );
 }
 
 render(){
@@ -45,7 +45,7 @@ render(){
             <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                 <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
                 <ModalBody>
-                    <LocalForm onSubmit={this.handleSubmit}>
+                    <LocalForm onSubmit={values=>this.handleSubmit(values)}>
                         <Row className='form-group'>
                             <Label htmlfor='rating' md={12}>Rating</Label>
                             <Col md={{size:12}}>
@@ -54,9 +54,10 @@ render(){
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
-                                    <option>5</option>
+                                    <option>5</option>                            
                                 </Control.select>
                             </Col>
+                            
                         </Row>
 
                         <Row className='form-group'>
