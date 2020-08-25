@@ -45,7 +45,7 @@ render(){
                         <Row className='form-group'>
                             <Label htmlfor='rating' md={12}>Rating</Label>
                             <Col md={{size:12}}>
-                                <Control.select model='.rating' name='rating' className='form-control'>
+                                <Control.select model='.rating' defaultValue='1' name='rating' className='form-control'>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
