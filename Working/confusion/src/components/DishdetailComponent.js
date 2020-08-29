@@ -28,8 +28,7 @@ toggleModal(){
 
 handleSubmit(values){
     this.toggleModal();
-    console.log('Current state is: ' + JSON.stringify(values));
-    alert('Current state is: ' + JSON.stringify(values));
+    this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
 }
 
 render(){
@@ -96,7 +95,7 @@ render(){
     }
 }
     
-function RenderComments({comments, postComment, dishId}){
+function RenderComments({comments, dishId, addComment}){
         if (comments == null){
             return (<div></div>)
         }               
@@ -123,7 +122,7 @@ function RenderComments({comments, postComment, dishId}){
                     <ul className='list-unstyled'>
                         {cmts}
                     </ul>
-            <CommentForm dishId={dishId} postComment={postComment}/>
+            <CommentForm dishId={dishId} addComment={addComment}/>
             </div>
             
         )
@@ -168,7 +167,9 @@ function RenderComments({comments, postComment, dishId}){
                 </div>
                 <div className="row">                   
                     <RenderDish dish={props.dish} />
-                    <RenderComments comments={props.comments}/>               
+                    <RenderComments comments={props.comments}
+                    addComment={props.addComment}
+                    dishId={props.dish.id}/>               
                 </div>
             </div>
         )
