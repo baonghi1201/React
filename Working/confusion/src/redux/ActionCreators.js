@@ -18,8 +18,8 @@ export const fetchDishes = () => (dispatch) => {
     dispatch(dishesLoading(true));
 
     return fetch(baseUrl + 'dishes')
-        .then(respone=>respone.json())
-        .then(dishes=>dispatch(addDishes(dishes)))
+        .then(response=>response.json())
+        .then(dishes=>dispatch(addDishes(dishes)));
 }
 
 export const dishesLoading = () => ({
@@ -39,8 +39,8 @@ export const addDishes = (dishes) => ({
 // Fetch COMMENTS
 export const fetchComments = () => (dispatch) => {
     return fetch(baseUrl + 'comments')
-        .then(respone=>respone.json())
-        .then(comments=>dispatch(addComment(comments)))
+        .then(response=>response.json())
+        .then(comments=>dispatch(addComments(comments)));
 }
 
 
@@ -49,7 +49,7 @@ export const commentFailed = () => (errmes) => ({
     payload: errmes
 })
 
-export const addComments=()=>(comments) => ({
+export const addComments=(comments) => ({
     type:ActionTypes.ADD_COMMENTS,
     payload:comments
 })
@@ -57,10 +57,11 @@ export const addComments=()=>(comments) => ({
 
 // Fetch PROMOS
 export const fetchPromos = () => (dispatch) =>{
-    dispatch(promosLoading(true))
+    dispatch(promosLoading(true));
+    
     return fetch(baseUrl + 'promotions')
-        .then(respone => respone.json())
-        .then(promos=>dispatch(addPromos(promos)))
+        .then(response => response.json())
+        .then(promos=>dispatch(addPromos(promos)));
 }
 
 export const promosLoading = () => ({
