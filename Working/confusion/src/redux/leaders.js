@@ -2,20 +2,20 @@ import * as ActionTypes from './ActionTypes';
 
 export const Leaders = (state={
     isLoading: true,
-    errmes:null,
+    errMess:null,
     leaders:[]
 }, action) => {
     switch(action.type){
         case ActionTypes.ADD_LEADERS:{
-            return{...state, isLoading:false, errmes:null, leaders:action.payload}
+            return{...state, isLoading:false, errMess:null, leaders:action.payload}
         }
 
         case ActionTypes.LEADERS_LOADING:{
-            return{...state, isLoading:true, errmes:null, leader:[]}
+            return{...state, isLoading:true, errMess:null, leader:[]}
         }
 
         case ActionTypes.LEADERS_FAILED:{
-            return{...state, isLoading: false, errmes:action.payload}
+            return{...state, isLoading: false, errMess:action.payload}
         }
 
 
